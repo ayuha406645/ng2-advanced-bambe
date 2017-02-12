@@ -15,7 +15,15 @@ const routes: Routes = [
     component: DashboardComponent
   }, {
     path: 'cards',
-    component: CardsComponent
+    children: [
+      {
+        path: '',
+        component: CardsComponent
+      }, {
+        path: ':type',
+        component: CardsComponent
+      }
+    ]
   }, {
     path: 'charts',
     children: [

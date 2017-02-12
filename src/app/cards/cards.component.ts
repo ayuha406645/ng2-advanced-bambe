@@ -27,4 +27,18 @@ export class CardsComponent implements OnInit {
     this.router.navigateByUrl('/cards/' + type);
   }
 
+  goQueryString() {
+    this.router.navigate(['/cards', 100], {
+      queryParams: {
+        name: 'QueryString1'
+      }
+    })
+  }
+
+  goMatrix() {
+    this.router.navigate(['/cards', 100, {
+        name: 'Matrix',
+      }]);
+  }
+
 }

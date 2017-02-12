@@ -1,3 +1,4 @@
+import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlotComponent implements OnInit {
 
-  constructor() { }
+  username: string;
+
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.username = this.route.parent.snapshot.params['username'];
   }
 
 }

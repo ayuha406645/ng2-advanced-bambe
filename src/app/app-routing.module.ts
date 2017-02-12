@@ -25,7 +25,7 @@ const routes: Routes = [
       }
     ]
   }, {
-    path: 'charts',
+    path: 'charts/:username',
     children: [
       {
         path: '',
